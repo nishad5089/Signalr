@@ -1,0 +1,119 @@
+<mat-card>
+<mat-toolbar color="accent" ><span align="center"> Message </span>
+<p *ngIf="dataSaved" ngClass="success" align="right">
+  {{ message }}
+</p>
+</mat-toolbar>
+<mat-card-content>
+  <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit(employeeForm.value)" class="demo-form">
+    <table>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td>
+                  <mat-form-field class="demo-full-width">
+                      <input formControlName="FirstName" matInput placeholder="First Name">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="!employeeForm.get('FirstName').valid && employeeForm.get('FirstName').touched"></span>
+                    </mat-error>
+              </td>
+              <td>
+                  <mat-form-field class="demo-full-width">
+                      <input formControlName="LastName" matInput placeholder="LastName Name">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="!employeeForm.get('LastName').valid && employeeForm.get('LastName').touched"></span>
+                    </mat-error>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  <mat-form-field class="demo-full-width">
+                      <input formControlName="Email" matInput placeholder="Email">
+                      <mat-hint>use like: demo@demo.com</mat-hint>
+                    </mat-form-field>
+                        <mat-error>
+                      <span *ngIf="!employeeForm.get('Email').valid && employeeForm.get('Email').touched">Invalid Email</span>
+                    </mat-error>
+                  
+                  
+              </td>
+              <td>
+                  <mat-form-field class="demo-full-width">
+                      <input formControlName="Designation" matInput placeholder="Designation">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="!employeeForm.get('Designation').valid && employeeForm.get('Designation').touched">Invalid Designation</span>
+                    </mat-error>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>Gender</span> <br><br>
+                <mat-radio-group formControlName="Gender">
+                  {{radioChecked}}
+                    <mat-radio-button value="0"> Male   </mat-radio-button>
+                    <mat-radio-button  value="1"> Female </mat-radio-button>
+                 </mat-radio-group>
+                  <mat-error>
+                      <span *ngIf="!employeeForm.get('Gender').valid && employeeForm.get('Gender').touched">Invalid Gender</span>
+                    </mat-error> 
+              </td>
+              <td>
+                  <mat-form-field class="demo-full-width">
+                      <input formControlName="Address" matInput placeholder="Address">
+                    </mat-form-field>
+                    <mat-error>
+                      <span *ngIf="employeeForm.get('Address').valid && employeeForm.get('Address').touched"></span>
+                    </mat-error>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="content-center">
+              
+                  <button mat-raised-button type="submit" color="accent" [disabled]="!employeeForm.valid || !employeeForm.dirty ">Submit</button>
+                  <button mat-raised-button type="reset" color="accent" (click)="resetForm()">Reset</button>
+              </td>
+            </tr>
+          </table>
+          
+        </td>
+        <td valign="top">
+            <table id="customers" class="table table-bordered table-striped table-hover">
+              <thead class="table-dark ">
+              <tr>
+                
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Designation</th>
+                  <th>Gender</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                
+              </tr></thead>
+              <tbody>
+              <tr *ngFor="let employee of allEmployees"> 
+                <td> {{employee.firstName}}</td>
+                <td> {{employee.lastName}}</td>
+                <td> {{employee.email}}</td>
+                <td> {{employee.designation}}</td>
+      
+                <td> {{employee.gender == 0 ? 'Male' : 'Female'}}</td>
+                <td>
+                  <button  mat-button  type="button"  (click)="loadEmployeeToEdit(employee.id)"> <i class="fa fa-edit"></i> Edit</button>
+                </td>
+                <td>
+                   <button mat-button  type="button" (click)="deleteEmployee(employee.id)"><i class="fa fa-trash"></i> Delete</button>
+                  </td>
+              </tr>
+            </tbody>
+            </table>
+        </td>
+      </tr>
+    </table>
+  </form>
+</mat-card-content>
+</mat-card>
