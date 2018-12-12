@@ -1,0 +1,11 @@
+C:\Users\my\Desktop\SingleIr\SingleIr.API\bin\Debug\netcoreapp2.0\Single.Ir.API.deps.json
+C:\Users\my\Desktop\SingleIr\SingleIr.API\bin\Debug\netcoreapp2.0\Single.Ir.API.runtimeconfig.json
+C:\Users\my\Desktop\SingleIr\SingleIr.API\bin\Debug\netcoreapp2.0\Single.Ir.API.runtimeconfig.dev.json
+C:\Users\my\Desktop\SingleIr\SingleIr.API\bin\Debug\netcoreapp2.0\Single.Ir.API.dll
+C:\Users\my\Desktop\SingleIr\SingleIr.API\bin\Debug\netcoreapp2.0\Single.Ir.API.pdb
+C:\Users\my\Desktop\SingleIr\SingleIr.API\obj\Debug\netcoreapp2.0\Single.Ir.API.csprojAssemblyReference.cache
+C:\Users\my\Desktop\SingleIr\SingleIr.API\obj\Debug\netcoreapp2.0\Single.Ir.API.csproj.CoreCompileInputs.cache
+C:\Users\my\Desktop\SingleIr\SingleIr.API\obj\Debug\netcoreapp2.0\Single.Ir.API.AssemblyInfoInputs.cache
+C:\Users\my\Desktop\SingleIr\SingleIr.API\obj\Debug\netcoreapp2.0\Single.Ir.API.AssemblyInfo.cs
+C:\Users\my\Desktop\SingleIr\SingleIr.API\obj\Debug\netcoreapp2.0\Single.Ir.API.dll
+C:\Users\my\Desktop\SingleIr\SingleIr.API\obj\Debug\netcoreapp2.0\Single.Ir.API.pdb
